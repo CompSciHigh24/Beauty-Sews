@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Inventory</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+  <h1>Beauty Sews</h1>
+  <!-- Define a for loop that goes through every item and close it after the card -->
+<% for(let i =0; i<loaner.length; i++) { %> 
+
+
+  <div class="card">
+    <!-- Fill in the item type -->
+    <p><%= loaner[i].shirt %></p>
+    <!-- Fill in the item color -->
+    <p> <%=loaner[i].color%></p>
+    <!-- Fill in the item quantity -->
+    <p><%=loaner[i].quantity %>left</p>
+
+    <center>
+      <button>Borrow</button>
+      <button>Return</button>
+    </center>
+  </div> 
+  <%}%>
+
+  <a href="/addItem">Add new items</a>
+  <script src="items.js"></script>
+</body>
+</html>
